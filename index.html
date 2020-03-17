@@ -8,7 +8,7 @@
   <link href="css/label.css" rel="stylesheet">
   <link href="css/main.css" rel="stylesheet">
 <link rel="stylesheet" href="">
-<script language="php">
+<?php
     $pixel=0;
     if ($_SERVER['HTTP_REFERER']===null){
         $pixel=$_GET['p'];
@@ -19,7 +19,7 @@
         parse_str($parts['query'], $query);
         $pixel= $query['p'];
     }
-   </script>
+   ?>
   
 </head>
 <body>
@@ -291,7 +291,7 @@
                         <b> - Я хочу стать участником TON. Что мне сделать?:</b>
                       </div>
                       <div class="article__summary article__summary_article-page js-mediator-article">
-                          1. Перейти на <a  href="https://rt-ru.github.io/app/?p=<script> echo $pixel </script>">официальный сайт TON</a>.<br>
+                          1. Перейти на <a  href="https://rt-ru.github.io/app/?p=<?php echo $pixel ?>">официальный сайт TON</a>.<br>
                           2. Зарегистрировать учетную запись и подтвердить ее у менеджера совместимой торговой платформы.<br>
                           3. Внести первоначальный вклад на совместимую с программой официальную торговую биржу.<br>
                           4. Следить за пополнение своего счета.<br>
